@@ -96,6 +96,25 @@ class _ContestItemState extends State<ContestItem> {
                   ),
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: width * 0.09),
+                    child: Column(
+                      children: const [
+                        Text("Win"),
+                        Text("₹ 8000"),
+                      ],
+                    ),
+                  ),
+                  CircleAvatar(
+                    radius: width * 0.05,
+                    backgroundColor: Colors.deepPurple[900],
+                    child: const Text("VS"),
+                  ),
+                ],
+              ),
               Container(
                 width: width * 0.7,
                 height: height * 0.05,
