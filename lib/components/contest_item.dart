@@ -102,9 +102,21 @@ class _ContestItemState extends State<ContestItem> {
                   Padding(
                     padding: EdgeInsets.only(right: width * 0.09),
                     child: Column(
-                      children: const [
-                        Text("Win"),
-                        Text("₹ 8000"),
+                      children: [
+                        Text(
+                          "Win",
+                          style: TextStyle(
+                            fontSize: width * 0.05,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "₹ 8,000",
+                          style: TextStyle(
+                            fontSize: width * 0.05,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -115,9 +127,44 @@ class _ContestItemState extends State<ContestItem> {
                   ),
                 ],
               ),
+              Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                        right: width * 0.04, left: width * 0.04),
+                    child: LinearProgressIndicator(
+                      value: 0.5,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: const AlwaysStoppedAnimation<Color>(
+                          Colors.deepPurple),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: width * 0.05),
+                        child: Text("50 spots filled",
+                            style: TextStyle(
+                              fontSize: width * 0.03,
+                              color: Colors.black,
+                            )),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: width * 0.05),
+                        child: Text("100 spots",
+                            style: TextStyle(
+                              fontSize: width * 0.03,
+                              color: Colors.black,
+                            )),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               Container(
                 width: width * 0.7,
-                height: height * 0.05,
+                height: height * 0.06,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(height * 0.02),

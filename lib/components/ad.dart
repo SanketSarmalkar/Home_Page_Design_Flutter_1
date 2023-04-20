@@ -8,7 +8,7 @@ class Ad extends StatelessWidget {
     double? width = MediaQuery.of(context).size.width;
     double? height = MediaQuery.of(context).size.height;
     return Container(
-      height: height * 0.1,
+      height: height * 0.08,
       color: Colors.yellow[50],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

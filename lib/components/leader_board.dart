@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxfin/components/leader_board_list.dart';
 
 class LeaderBoard extends StatefulWidget {
   const LeaderBoard({super.key});
@@ -27,19 +28,29 @@ class _LeaderBoardState extends State<LeaderBoard> {
               Container(
                 height: height * 0.04,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(height * 0.2),
-                    border: Border.all(color: Colors.blue)),
+                  borderRadius: BorderRadius.circular(height * 0.2),
+                  border: Border.all(
+                      color: Colors.blue[900]!, width: width * 0.004),
+                ),
                 child: MaterialButton(
                   onPressed: () {},
                   child: Text("Veiw All",
                       style: TextStyle(
                         fontSize: width * 0.03,
+                        color: Colors.blue[900],
                       )),
                 ),
               ),
             ],
           ),
         ),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(height * 0.02),
+            color: Colors.grey[300],
+          ),
+          child: const LeaderBoardList(),
+        )
       ],
     );
   }
