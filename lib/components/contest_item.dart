@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 class ContestItem extends StatefulWidget {
   const ContestItem({super.key});
@@ -41,22 +42,34 @@ class _ContestItemState extends State<ContestItem> {
                       ),
                       width: width * 0.2,
                       height: height * 0.05,
-                      child: Padding(
-                        padding: EdgeInsets.all(height * 0.007),
-                        child: Column(
-                          children: [
-                            Text("Predict &",
-                                style: TextStyle(
-                                  fontSize: width * 0.028,
-                                  color: Colors.white,
-                                )),
-                            Text("Win",
-                                style: TextStyle(
-                                  fontSize: width * 0.028,
-                                  color: Colors.white,
-                                )),
-                          ],
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(height * 0.007),
+                            child: Column(
+                              children: [
+                                Text("Predict &",
+                                    style: TextStyle(
+                                      fontSize: width * 0.028,
+                                      color: Colors.white,
+                                    )),
+                                Text("Win",
+                                    style: TextStyle(
+                                      fontSize: width * 0.028,
+                                      color: Colors.white,
+                                    )),
+                              ],
+                            ),
+                          ),
+                          ClipPath(
+                            clipper: ArrowClipper(height * 0.015, 0, Edge.LEFT),
+                            child: Container(
+                              color: Colors.white,
+                              width: width * 0.032,
+                            ),
+                          ),
+                        ],
                       )),
                   Padding(
                     padding: EdgeInsets.only(top: height * 0.02),

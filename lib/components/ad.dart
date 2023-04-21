@@ -13,11 +13,27 @@ class Ad extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("REFER & EARN !",
-              style: TextStyle(
-                fontSize: width * 0.06,
-                fontWeight: FontWeight.bold,
-              )),
+          Transform.rotate(
+            angle: 3 * 3.14 / 2,
+            child: const Icon(
+              Icons.celebration,
+              color: Colors.black,
+              textDirection: TextDirection.rtl,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: width * 0.02, right: width * 0.02),
+            child: Text("REFER & EARN !",
+                style: TextStyle(
+                  fontSize: width * 0.06,
+                  fontWeight: FontWeight.bold,
+                )),
+          ),
+          const Icon(
+            Icons.celebration,
+            color: Colors.black,
+            textDirection: TextDirection.rtl,
+          ),
         ],
       ),
     );
