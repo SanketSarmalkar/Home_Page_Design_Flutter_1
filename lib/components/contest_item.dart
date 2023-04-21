@@ -46,7 +46,7 @@ class _ContestItemState extends State<ContestItem> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(height * 0.007),
+                            padding: EdgeInsets.all(height * 0.0072),
                             child: Column(
                               children: [
                                 Text("Predict &",
@@ -65,7 +65,13 @@ class _ContestItemState extends State<ContestItem> {
                           ClipPath(
                             clipper: ArrowClipper(height * 0.015, 0, Edge.LEFT),
                             child: Container(
-                              color: Colors.white,
+                              decoration: BoxDecoration(
+                                border: Border(
+                                    right: BorderSide(
+                                        color: Colors.white,
+                                        width: width * 0.2)),
+                                color: Colors.white,
+                              ),
                               width: width * 0.032,
                             ),
                           ),
