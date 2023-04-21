@@ -44,12 +44,15 @@ class _LeaderBoardState extends State<LeaderBoard> {
             ],
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(height * 0.02),
-            color: Colors.grey[300],
+        Padding(
+          padding: EdgeInsets.all(width * 0.05),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(height * 0.02),
+              color: Colors.grey[300],
+            ),
+            child: const LeaderBoardList(),
           ),
-          child: const LeaderBoardList(),
         )
       ],
     );

@@ -19,7 +19,7 @@ class _LeaderBoardListState extends State<LeaderBoardList> {
           scrollDirection: Axis.horizontal,
           itemCount: 4,
           itemBuilder: (context, index) {
-            return const LeaderBoardItem(item: 1);
+            return LeaderBoardItem(item: index);
           }),
     );
   }
